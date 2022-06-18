@@ -1,0 +1,94 @@
+.wishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 8s infinite;
+  animation-delay: calc(0s * var(--i));
+}
+/* crops animations that exceeds one line area */
+.line {
+  width: 100%;
+  height: 6rem;
+  overflow: hidden;
+  /* border: 1px solid black; */
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+/* flipping class and key frames*/
+.flipX {
+  animation: 8s anim-flipX ease infinite;
+  padding: 20px;
+}
+@keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    /* animate nothing to pause animation at the end */
+    opacity: 1;
+    transform: rotateX(790deg);
+  }
+}
+.section-i {
+
+  margin:75px auto auto 50px;
+}
+.my-img {
+  float: left;
+  width: 200px;
+  height: auto;
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+}
+footer {
+  padding: 20px;
+  float: right;
+}
+i {
+  padding: 5px;
+  margin: auto;
+}
+footer {
+  animation: footer 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
+}
+
+@keyframes footer {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
